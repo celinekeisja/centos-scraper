@@ -27,7 +27,7 @@ def csv_write(c):
             writer = csv.DictWriter(csv_file, fieldnames=field_n)
             writer.writeheader()
     else:
-        with open('test.csv', 'a', newline='') as csv_file:
+        with open('test.csv', 'a+', newline='') as csv_file:
             field_n = ['filename', 'download_link', 'filesize']
             writer = csv.DictWriter(csv_file, fieldnames=field_n)
             writer.writerow(c)
